@@ -1,0 +1,17 @@
+APP TENDA DE UMBANDA CABOCLO SULTÃO DAS MATAS
+
+1) Os arquivos devem ficar JUNTOS na mesma pasta (index.html, config.js, sw.js, manifest.webmanifest, icones).
+2) Crie um projeto NOVO no Supabase (separado do da perfumaria).
+3) No Supabase > SQL Editor, execute banco-de-dados.sql.
+4) Authentication > Users > Add user: crie um login com senha forte para seu pai. Anote o UUID (User UID).
+5) SQL Editor: execute esta instrução substituindo o texto pelo UUID:
+   insert into public.administradores (user_id) values ('UUID-DO-USUARIO');
+   Para autorizar outro familiar, crie outra conta e insira o UUID dela.
+6) A Project URL e a chave publishable do projeto APP TERREIRO já estão preenchidas em config.js. NÃO use service_role ou secret no site.
+7) Ao mudar de projeto, atualize apenas esses dois valores no config.js.
+8) Publique TODOS os arquivos (exceto banco-de-dados.sql e LEIA-ME.txt, que não são necessários ao site) na raiz de um novo repositório GitHub Pages; habilite Pages em Settings > Pages > Deploy from branch > main / root.
+9) Abra a URL HTTPS no celular, entre com seu e-mail e senha e escolha Adicionar à tela inicial / Instalar app.
+
+IMPORTANTE: os dados são sincronizados online e exigem internet para uso; o cache não guarda pagamentos offline. Somente os usuários autorizados conseguem ler e alterar os dados pelo aplicativo. Recomenda-se ativar MFA, proteger o login e exportar backups regulares pelo Supabase. A exclusão de um filho também exclui seu histórico vinculado.
+
+Regra atual: R$ 150 por mês; marcado como pago com a data atual. A contagem de pendências é referente aos meses até o mês corrente dentro do ano selecionado, para todos os filhos ativos; não distingue mês de ingresso. Cadastros inativos permanecem nos registros, mas saem da contagem de pendências.
